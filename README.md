@@ -29,11 +29,11 @@ Click the button below to automatically deploy SonarQube on OCI using **Resource
 1. **Sign in to OCI Console** and go to **Resource Manager** > **Stacks**.
 2. Click **Create Stack**.
 3. Choose **"From a URL"**, and enter:
-   ```
-   <copy>
+   ```bash
    https://github.com/dranicu/deploy-sonarqube-oci-oke/archive/refs/heads/main.zip
-   </copy>
    ```
+
+
 4. Click **Next**, configure required variables, and create the stack.
 5. Click **Terraform Actions** > **Apply** to deploy the stack.
 
@@ -42,36 +42,24 @@ Click the button below to automatically deploy SonarQube on OCI using **Resource
 ## Option 2: Deploy Using Terraform CLI
 
 ### 1. Clone the Repository
-```
-<copy>
+```bash
 git clone https://github.com/dranicu/deploy-sonarqube-oci-oke.git
 cd deploy-sonarqube-oci-oke
-</copy>
 ```
 
 ### 2. Initialize Terraform
-```
-<copy>
+```bash
 terraform init
-</copy>
 ```
 
-### 3. Configure Variables
-- Create a `terraform.tfvars` file with necessary variable values.
-- Refer to `terraform.auto.tfvars.example` for guidance.
-
-### 4. Plan the Deployment
-```
-<copy>
+### 3. Plan the Deployment
+```bash
 terraform plan
-</copy>
 ```
 
-### 5. Apply the Deployment
-```
-<copy>
+### 4. Apply the Deployment
+```bash
 terraform apply
-</copy>
 ```
 - Confirm the apply action when prompted.
 
@@ -83,7 +71,7 @@ terraform apply
 - Retrieve the Load Balancer's public IP from the **Terraform output** or **OCI Console**.
 - Open the link in your browser.
 
-### Default Credentials
+### Default SonarQube Credentials
 - **Username**: `admin`
 - **Password**: `admin`
 
